@@ -2,24 +2,22 @@ import React from 'react'
 
 const Card = () => {
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains" />
+        <div className="flex flex-col justify-center card max-w-sm rounded overflow-hidden shadow-lg">
+            <img className="card__image w-full" src="#" alt="Sunset in the mountains" />
             <div className="px-6 py-4">
-                <div className="font-bold text-x1 mb-2">The Golden Sunset</div>
-                <p className="text-gray-700 text-base">
-                    JJBbb  BBBb  jB j Mb nkNkjn kj KJn J NJ
-                </p>
+                <div className="card__title fot-bold text-xl mb-2">Title</div>
+                <div className="flex justify-evenly">
+                    <div className="card__price text-gray-700 text-base">card__price</div>
+                    <div className="currency text-gray-700 text-base">currency</div>
+                </div>
+                <div className="card__poduct-amount text-gray-700 text-base">card__product-ammount</div>
             </div>
             <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold">
-                    #photography
-                </span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold">
-                    #travel
-                </span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold">
-                    #winter
-                </span>
+               <button
+                    type="button"
+                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold"
+                    >Add
+                </button>
             </div>
         </div>
     )  
@@ -28,14 +26,3 @@ const Card = () => {
 Card.prototype = {}
 
 export default React.memo(Card)
-
-/*
-    <div className="card">
-        <div className="card__image">card__image</div>
-        <div className="card__price">card__price</div>
-        <div className="currency">currency</div>
-        <div className="card__poduct-amount">card__product-ammount</div>
-        <div className="card__title">card__title</div>
-        <button type="button">Add</button>
-    </div>
-*/ 
