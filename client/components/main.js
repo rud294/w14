@@ -4,8 +4,8 @@ import Header from './header'
 import Card from './common/card'
 import Currency from './common/currency'
 import Sort from './common/sort'
-// <OrderCount />
-// import OrderCount from './common/order-count'
+
+import OrderCount from './common/order-count'
 
 const Main = () => {
   return (
@@ -15,6 +15,7 @@ const Main = () => {
       <Card />
       <Currency />
       <Sort />
+      <OrderCount />
     </div>
   )
 }
