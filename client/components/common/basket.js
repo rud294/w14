@@ -16,4 +16,5 @@ const Basket = () => {
 }
 
 Basket.prototype = {}
+
 export default Basket

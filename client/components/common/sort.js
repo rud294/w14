@@ -10,7 +10,7 @@ const Sort = (props) => {
                 <button 
                     id="sort-price" 
                     type="button" 
-                    className="mt-2 px-3 mx-2 py-2 bg=blue-500 t rounded-lg textwhite"
+                    className="mt-2 px-3 mx-2 py-2 bg-blue-500 t rounded-lg text-white"
                     onClick={onClick}>
                     sort by price
                 </button>
@@ -18,7 +18,7 @@ const Sort = (props) => {
             <div>
                 <button id="sort-name" 
                     type="button" 
-                    className="mt-2 px-3 mx-2 py-2 bg=blue-500 t rounded-lg textwhite"
+                    className="mt-2 px-3 mx-2 py-2 bg-blue-500 t rounded-lg text-white"
                         onClick={onClick}>
                     sort by alphabet
                 </button>

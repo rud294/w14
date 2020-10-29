@@ -15,9 +15,16 @@ const OrderCount = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path 
+                            stroke="currentColor" 
+                            strokeWidth="2" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                        />
                     </svg>
-                    <span className="absolute top-0 rounded-full bg-indigo-500 text-white p-1 " > корзина </span>
+                    <span className="absolute top-0 rounded-full bg-indigo-500 text-white p-1 " > 
+                        корзина 
+                    </span>
                 </Link>
             </div>
         </div>
