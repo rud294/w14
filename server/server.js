@@ -44,9 +44,8 @@ const middleware = [
 middleware.forEach((it) => server.use(it))
 
 server.get('/api/v1/goods', async (req, res) => {
-  console.log('qwerty')
-  console.log(`${__dirname}/data/goods.json`)
-  const readGoods = await readFile(`${__dirname}/data/goods.json`, { encoding: 'utf8' })
+  
+  const readGoods = await readFile(`${__dirname}/data/googs.json`, { encoding: 'utf8' })
     .then( f => JSON.parse(f))
     .catch( () => ({goods: 'NO'}))
   res.send(JSON.stringify(readGoods))  
