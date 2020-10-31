@@ -14,19 +14,19 @@ const { readFile } = require('fs').promises
 
 const Root = () => ''
 
-try {
-  // eslint-disable-next-line import/no-unresolved
-  // ;(async () => {
-  //   const items = await import('../dist/assets/js/root.bundle')
-  //   console.log(JSON.stringify(items))
+// try {
+//   // eslint-disable-next-line import/no-unresolved
+//   // ;(async () => {
+//   //   const items = await import('../dist/assets/js/root.bundle')
+//   //   console.log(JSON.stringify(items))
 
-  //   Root = (props) => <items.Root {...props} />
-  //   console.log(JSON.stringify(items.Root))
-  // })()
-  console.log(Root)
-} catch (ex) {
-  console.log(' run yarn build:prod to enable ssr')
-}
+//   //   Root = (props) => <items.Root {...props} />
+//   //   console.log(JSON.stringify(items.Root))
+//   // })()
+//   console.log(Root)
+// } catch (ex) {
+//   console.log(' run yarn build:prod to enable ssr')
+// }
 
 let connections = []
 
@@ -48,7 +48,7 @@ server.get('/api/v1/goods', async (req, res) => {
   const readGoods = await readFile(`${__dirname}/data/googs.json`, { encoding: 'utf8' })
     .then( f => JSON.parse(f))
     .catch( () => ({goods: 'NO'}))
-  res.send(JSON.stringify(readGoods))  
+  res.json(readGoods)  
 })
 
 server.use('/api/', (req, res) => {
