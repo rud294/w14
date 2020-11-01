@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
     return (
         <div className="flex flex-col card max-w-sm rounded overflow-hidden shadow-lg">
             <img className="card__image w-full object-cover h-40" src="#" alt="Product" />
             <div className="px-6 py-4">
-                <div className="card__title font-bold text-xl mb-2">Title</div>
+    <div className="card__title font-bold text-xl mb-2">{props.title}</div>
                 <div className="flex justify-evenly">
                     <div className="card__price text-gray-700 text-base">card__price</div>
                     <div className="currency text-gray-700 text-base">currency</div>
