@@ -11,16 +11,16 @@ import OrderCount from './common/order-count'
 import { getGoods } from '../redux/reducers/goods'
  
 const Main = () => {
-  const listOfGoods = useSelector( (store) => {
-    return store.goods.listOfGoods
-  })
+  const listOfGoods = useSelector( (store) => store.goods.listOfGoods)
   const dispatch = useDispatch()
 
+  console.log('listOfGoods from Main.js', listOfGoods)
+
   useEffect ( () => {
-    dispatch(getGoods)
+    console.log('useEffect from main')
+    dispatch(getGoods())
     return () => {}
   }, [])
-  console.log(listOfGoods)
   return (
     <div>
       <Head title="hw14" />
@@ -28,13 +28,13 @@ const Main = () => {
       <Currency />
       <Sort />
       <OrderCount />
-      { listOfGoods.map((item) => { 
-          return (
-          <div key={ item.id }>
-            (<Card title={ item.title } />)
-          </div>)
-          })  }        
-      {/* <Card /> */}
+      { listOfGoods.reduce((acc, item) => { 
+          console.log(item.title)
+          return [...acc,(
+            <div key={ item.id }>
+              <Card title={ item.title } />
+            </div>)]
+          }, []) }        
     </div>
   )
 }
