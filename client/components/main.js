@@ -28,13 +28,15 @@ const Main = () => {
       <Currency />
       <Sort />
       <OrderCount />
-      { listOfGoods.reduce((acc, item) => { 
-          console.log(item.title)
-          return [...acc,(
-            <div key={ item.id }>
-              <Card title={ item.title } />
-            </div>)]
-          }, []) }        
+      <div className="flex flex-wrap">
+        { listOfGoods.reduce((acc, item) => { 
+            console.log(item.title)
+            return [...acc,(
+              <div key={ item.id } className="m-8">
+                <Card data={ item } />
+              </div>)]
+            }, []) }
+      </div>        
     </div>
   )
 }
