@@ -14,10 +14,10 @@ const Main = () => {
   const listOfGoods = useSelector( (store) => store.goods.listOfGoods)
   const dispatch = useDispatch()
 
-  console.log('listOfGoods from Main.js', listOfGoods)
+  // console.log('listOfGoods from Main.js', listOfGoods)
 
   useEffect ( () => {
-    console.log('useEffect from main')
+    // console.log('useEffect from main')
     dispatch(getGoods())
     return () => {}
   }, [])
@@ -30,7 +30,7 @@ const Main = () => {
       <OrderCount />
       <div className="flex flex-wrap">
         { listOfGoods.reduce((acc, item) => { 
-            console.log(item.title)
+            // console.log(item.title)
             return [...acc,(
               <div key={ item.id } className="m-8">
                 <Card data={ item } />
