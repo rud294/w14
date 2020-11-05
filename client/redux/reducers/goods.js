@@ -8,7 +8,7 @@ const SET_CURRENCY = 'SET_CURRENCY'
 
 const initialState = {
     listOfGoods: [], 
-    // cur_rency: ['usd','eur','cad']
+    currency: 'USD'
 }
 
 export default (state = initialState, action) => {
@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
         case SET_CURRENCY: {
             return {
                 ...state,
-                cur_rency: action.data 
+                currency: action.data 
             }
         } 
         default:
@@ -43,8 +43,11 @@ export function getGoods() {
 export function setCurrency(currency) {
     return (dispatch, getState) => {
         const state = getState() 
-        // console.log('setState from setCurrency', setState)
-        dispatch({ type: SET_CURRENCY, getState })
+        console.log('state from setCurrency', state)
+        dispatch({ 
+            type: SET_CURRENCY, 
+            data: currency.toUpperCase() 
+        })
          
     }
 }

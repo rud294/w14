@@ -1,6 +1,14 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+
+import { setCurrency } from '../../redux/reducers/goods'
 
 const Currency = () => {
+
+    const dispatch = useDispatch()
+    const currencyClick = (currency) => {
+        dispatch(setCurrency(currency))
+    }
 
     return (
         <div>
@@ -8,6 +16,7 @@ const Currency = () => {
                 type="button"
                 id="usd-button"
                 className="mt-2 mx-2 px-3 py-2 bg-blue-500 t rounded-lg text-white"
+                onClick = { () => currencyClick('USD') }
             >
                 USD
             </button>
@@ -15,6 +24,7 @@ const Currency = () => {
                 type="button"
                 id="eur-button"
                 className="mt-2 mx-2 px-3 py-2 bg-blue-500 t rounded-lg text-white"
+                onClick = { () => currencyClick('EUR') }
             >
                 EUR
             </button>
@@ -22,6 +32,7 @@ const Currency = () => {
                 type="button"
                 id="cad-button"
                 className="mt-2 mx-2 px-3 py-2 bg-blue-500 t rounded-lg text-white"
+                onClick = { () => currencyClick('CAD') }
             >
                 CAD
             </button>
