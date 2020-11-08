@@ -1,9 +1,14 @@
 import React from 'react'
+import Header from '../header'
 
 const Basket = () => {
     return (
         <div>
-            Dis is Basket
+            <Header />
+            <div>
+                Dis is Basket
+            </div>
+            
             <div className="product__image">1</div>
             <div className="product__title">1</div>
             <div className="product__price">1</div>
